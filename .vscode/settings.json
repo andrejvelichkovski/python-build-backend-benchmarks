@@ -1,0 +1,7 @@
+{
+    "python.analysis.extraPaths": [
+        "./apps",
+        "./benchmark-orchestrator/src",
+        "./benchmark-orchestrator/src"
+    ]
+}
