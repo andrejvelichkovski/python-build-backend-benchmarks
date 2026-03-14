@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import json
+from pathlib import Path
 
 from benchmark_orchestrator.benchmark_utils import BuildBackends
 import seaborn as sns
