@@ -42,7 +42,6 @@ def main():
     )
     args = parser.parse_args()
 
-    average_times = {}
     benchmark_results = {}
 
     for backend in all_backends:

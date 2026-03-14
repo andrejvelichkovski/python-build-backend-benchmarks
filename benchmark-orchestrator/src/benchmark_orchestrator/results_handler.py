@@ -18,6 +18,9 @@ def load_results(file_path: str) -> dict:
 
 
 def summarize_results(results: dict[str, list[float]]) -> None:
+    # Skip the first run to accommodate for caching and warm-up
+    results = {backend: times[1:] for backend, times in results.items()}
+
     print("------------------------------------")
     print("Average times:")
     for backend, times in results.items():
@@ -33,7 +36,9 @@ def summarize_results(results: dict[str, list[float]]) -> None:
 
 
 def visualize_results(
-    results: dict[str, list[float]], exclude_backends: list[BuildBackends]
+    results: dict[str, list[float]],
+    exclude_backends: list[BuildBackends],
+    output_file: str = "average_build_times.svg",
 ) -> None:
 
     backends = [
@@ -49,5 +54,5 @@ def visualize_results(
     plt.title("Average Build Times for Different Build Backends")
     plt.xticks(rotation=45, ha="right")
     plt.tight_layout()
-    plt.savefig("average_build_times.svg", format="svg")
+    plt.savefig(output_file, format="svg")
     plt.close()
