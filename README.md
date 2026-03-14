@@ -48,9 +48,8 @@ that most engineers usually perform when developing Python libraries.
 ### Multi-core benchmark results
 
 We repeated the same experiment while giving the docker container access to 4 
-cores of the host machine. The results of this are available on the [second graph]
-(../results/multi-core-benchmark.svg). However, they show no difference at all
-with the main single core benchmark.
+cores of the host machine. The results of this are available on the [second graph](../results/multi-core-benchmark.svg).
+However, they show no difference at all with the main single core benchmark.
 
 ## Experiment description
 
