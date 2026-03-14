@@ -72,7 +72,7 @@ the second experiment we assigned cores 0 to 3 to the docker container.
 All experiments were performed on an average Lenovo ThinkPad laptop which would
 indicate an average engineer host machine.
 
-> 📘
+> [!TIP]
 >
 > This projects considers a limited set of build backends and benchmarks them
 > on an empty python project with a limited source code. While it gives us
